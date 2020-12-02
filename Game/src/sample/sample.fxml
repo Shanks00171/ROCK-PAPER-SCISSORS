@@ -1,0 +1,77 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml" style="-fx-background-color:purple">
+    <top>
+        <HBox spacing="100" alignment="CENTER">
+            <padding>
+                <Insets top="20"/>
+            </padding>
+            <HBox alignment="BOTTOM_LEFT">
+                <padding>
+                    <Insets left="20" top="50" right="25"/>
+                </padding>
+                <Text text="Computer's Choice" fill="white" style="-fx-alignment:left;-fx-font-size:25"/>
+            </HBox>
+            <Text text="ROCK PAPERS AND SCISSORS" fill="aquamarine" style="-fx-font-size:50" textAlignment="LEFT">
+                <font>
+                    <Font name="Times New Roman Bold"/>
+                </font>
+            </Text>
+            <HBox alignment="BOTTOM_LEFT">
+                <padding>
+                    <Insets left="25"/>
+                </padding>
+                <Text text="User's Choice" fill="aliceblue" style="-fx-alignment:left; -fx-font-size:25"/>
+            </HBox>
+        </HBox>
+    </top>
+    <left>
+    <VBox alignment="CENTER" >
+<!--        <padding>-->
+<!--            <Insets left="50"/>-->
+<!--        </padding>-->
+        <ImageView fx:id="comChoice" rotate="270" scaleX=".4" scaleY=".4"/>
+        <Label fx:id="computerChoice" text="Computer's Choice" prefWidth="200" style="-fx-alignment:center;"/>
+    </VBox>
+    </left>
+    <right >
+        <VBox alignment="CENTER_LEFT" >
+            <padding>
+                <Insets right="50"/>
+            </padding>
+            <ImageView fx:id="useChoice" rotate="270" scaleX=".4" scaleY=".4"/>
+        <Label fx:id="userChoice" text="Your Choice" prefWidth="200" />
+        </VBox>
+    </right>
+    <center>
+        <VBox alignment="CENTER" >
+            <ImageView fx:id="result" scaleY=".6" scaleX=".6"/>
+            <Label fx:id="resultText" textFill="deepskyblue" text="Welcome to ROCK-PAPER-SCISSORS Click the Buttons in the bottom to chose your choice" wrapText="true"
+                   style="-fx-alignment:center;-fx-font-size:60" textAlignment="JUSTIFY"/>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="25" alignment="CENTER" style="-fx-background-color:black">
+        <padding>
+            <Insets bottom="10" top="10"/>
+        </padding>
+        <Button fx:id="rockButton" text="Rock"  textFill="black" prefWidth="250" prefHeight="40" style="-fx-background-color : silver"
+                onAction="#onButtonClicked"/>
+        <Button fx:id="paperButton" text="Paper" textFill="black" prefWidth="250" prefHeight="40" style="-fx-background-color : silver"
+                onAction="#onButtonClicked"/>
+        <Button fx:id="scissorButton" text="Scissors" textFill="black" prefWidth="250" prefHeight="40" style="-fx-background-color : silver"
+                onAction="#onButtonClicked"/>
+        </HBox>
+    </bottom>
+</BorderPane>
